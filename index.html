@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="uz"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kamolo || Professional Developer </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold mono">
+                    <span class="text-white">dev</span><span class="gradient-text">Portfolio</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white smooth-transition">Bosh sahifa</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white smooth-transition">Men haqimda</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white smooth-transition">Ko'nikmalar</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-white smooth-transition">Xizmatlar</a>
+                    <a href="#blog" class="nav-link text-gray-300 hover:text-white smooth-transition">Blog</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white smooth-transition">Loyihalar</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white smooth-transition">Bog'lanish</a>
+                </div>
+                <button id="mobile-menu" class="md:hidden text-gray-300">
+                    <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="md:hidden fixed top-16 right-4 bg-black/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-40 min-w-[200px] hidden">
+                <div class="p-3 space-y-1">
+                    <a href="#home" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Bosh sahifa</a>
+                    <a href="#about" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Men haqimda</a>
+                    <a href="#skills" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Ko'nikmalar</a>
+                    <a href="#services" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Xizmatlar</a>
+                    <a href="#blog" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Blog</a>
+                    <a href="#projects" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Loyihalar</a>
+                    <a href="#contact" class="block text-gray-300 hover:text-white hover:bg-gray-800 smooth-transition py-2 px-3 rounded-lg text-sm">Bog'lanish</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-6 pt-20 hero-section mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div class="space-y-8 fade-in">
+                    <div class="space-y-4">
+                        <p class="text-gray-400 text-sm uppercase tracking-wider mono">Full-Stack Developer</p>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            <span class="text-white">Salom, men</span><br>
+                            <span class="gradient-text">Kamolov Og'abek</span>
+                        </h1>
+                        <div class="text-xl text-gray-300 typing-cursor" id="typing-text">Professi</div>
+                    </div>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-lg">
+                        Muhammad Al-Xorazmiy nomidagi TATU 3-kurs talabasi. Kali Linux, UI/UX dizayn va 
+                        zamonaviy web texnologiyalar bilan ishlaydigan professional dasturchi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('projects')" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl smooth-transition hover:shadow-lg hover:shadow-blue-500/25 text-base sm:text-lg font-medium text-center">
+                            Loyihalarni Ko'rish
+                        </button>
+                        <button onclick="scrollToSection('contact')" class="border border-gray-600 text-gray-300 px-6 sm:px-8 py-3 sm:py-4 rounded-xl smooth-transition hover:border-blue-500 hover:text-white text-base sm:text-lg font-medium text-center">
+                            Men Bilan Bog'laning
+                        </button>
+                    </div>
+                </div>
+                <div class="relative fade-in" style="animation-delay: 0.3s;">
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto relative social-icons">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
+                        <!-- RASM JOYLASHTIRADIGAN JOY - Bu yerga o'zingizning rasmingizni qo'ying -->
+                        <div class="absolute inset-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-700 overflow-hidden">
+                            <img src="kamolov.jpg" alt="Kamolov Og'abek" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <!-- Animated Social Media Icons -->
+                        <a href="https://t.me/KAMOLOV_OTABEKOVICH" target="_blank" class="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center border-4 border-blue-400 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-blue-500/50">
+                            <i class="fab fa-telegram text-3xl text-white"></i>
+                        </a>
+                        <a href="https://instagram.com/kamolov_otabekovich" target="_blank" class="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center border-4 border-pink-400 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-pink-500/50" style="animation-delay: 0.5s;">
+                            <i class="fab fa-instagram text-3xl text-white"></i>
+                        </a>
+                        <a href="https://youtube.com/@kamolov_otabekovich" target="_blank" class="absolute top-1/2 -left-12 w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center border-4 border-red-400 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-red-500/50" style="animation-delay: 1s;">
+                            <i class="fab fa-youtube text-2xl text-white"></i>
+                        </a>
+                        <a href="tel:+998971860884" class="absolute top-1/2 -right-12 w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center border-4 border-green-400 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-green-500/50" style="animation-delay: 1.5s;">
+                            <i class="fab fa-whatsapp text-2xl text-white"></i>
+                        </a>
+                        <a href="https://github.com/kamolov_otabekovich" target="_blank" class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center border-4 border-gray-600 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-gray-500/30" style="animation-delay: 2s;">
+                            <i class="fab fa-github text-xl text-white"></i>
+                        </a>
+                        <a href="mailto:kamolovotabekovich@gmail.com" class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center border-4 border-blue-500 smooth-transition hover:scale-110 animate-pulse shadow-lg shadow-blue-500/30" style="animation-delay: 2.5s;">
+                            <i class="fas fa-envelope text-xl text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-20 px-4 md:px-6 mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Men</span> <span class="gradient-text">Haqimda</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 fade-in">
+                    <h3 class="text-2xl font-semibold text-white">Professional Dasturchi</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Muhammad Al-Xorazmiy nomidagi TATU 3-kurs talabasi va professional full-stack dasturchi. 
+                        Kali Linux, UI/UX dizayn va zamonaviy web texnologiyalar bilan ishlayman.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Framer, React, Node.js va boshqa zamonaviy texnologiyalar orqali sifatli loyihalar yarataman. 
+                        Ijtimoiy tarmoqlarda bilimlarimni ulashaman va doimiy ravishda o'z ko'nikmalarimni rivojlantiraman.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800">
+                            <div class="text-3xl font-bold gradient-text">50+</div>
+                            <div class="text-gray-400 mt-2">Loyihalar</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800">
+                            <div class="text-3xl font-bold gradient-text">3</div>
+                            <div class="text-gray-400 mt-2">Kurs</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800">
+                            <div class="text-3xl font-bold gradient-text">30+</div>
+                            <div class="text-gray-400 mt-2">Mijozlar</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800">
+                            <div class="text-3xl font-bold gradient-text">24/7</div>
+                            <div class="text-gray-400 mt-2">Yordam</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8 fade-in" style="animation-delay: 0.3s;">
+                    <h4 class="text-2xl font-semibold text-white mb-8">Texnologiyalar</h4>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-4 p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-linux text-4xl text-green-400"></i>
+                            <div>
+                                <div class="font-semibold text-white text-lg">Kali Linux</div>
+                                <div class="text-gray-400">OS &amp; Security</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fas fa-palette text-4xl text-pink-400"></i>
+                            <div>
+                                <div class="font-semibold text-white text-lg">UI/UX Design</div>
+                                <div class="text-gray-400">Framer, Figma</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-react text-4xl text-blue-400"></i>
+                            <div>
+                                <div class="font-semibold text-white text-lg">Frontend</div>
+                                <div class="text-gray-400">React, Next.js</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fas fa-server text-4xl text-yellow-400"></i>
+                            <div>
+                                <div class="font-semibold text-white text-lg">Backend</div>
+                                <div class="text-gray-400">Node.js, Python</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 md:py-20 px-4 md:px-6 bg-gray-950 mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Mening</span> <span class="gradient-text">Ko'nikmalarim</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8 fade-in">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-white font-semibold text-lg">Frontend Dasturlash</span>
+                            <span class="text-gray-400">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-white font-semibold text-lg">UI/UX Dizayn</span>
+                            <span class="text-gray-400">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-white font-semibold text-lg">Backend Dasturlash</span>
+                            <span class="text-gray-400">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-white font-semibold text-lg">Linux va Xavfsizlik</span>
+                            <span class="text-gray-400">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8 fade-in" style="animation-delay: 0.3s;">
+                    <h4 class="text-2xl font-semibold text-white mb-8">Vositalar va Texnologiyalar</h4>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-react text-5xl text-blue-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">React</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-node-js text-5xl text-green-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">Node.js</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-python text-5xl text-yellow-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">Python</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-linux text-5xl text-green-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">Linux</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-figma text-5xl text-purple-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">Figma</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-900 rounded-xl border border-gray-800 smooth-transition hover:border-blue-500">
+                            <i class="fab fa-git-alt text-5xl text-orange-400 mb-4"></i>
+                            <div class="text-gray-300 font-medium">Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 md:py-20 px-4 md:px-6 mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Mening</span> <span class="gradient-text">Xizmatlarim</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-400 text-lg">Professional dasturlash va dizayn xizmatlari</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Web Development -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 smooth-transition hover:border-blue-500 card-hover fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Web Dasturlash</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Zamonaviy web saytlar va ilovalar yaratish. React, Node.js, va boshqa texnologiyalar bilan.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Frontend Development
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Backend Development
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Database Design
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            API Integration
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold gradient-text mb-2">$500+</div>
+                        <div class="text-gray-400 text-sm mb-6">Loyihadan boshlab</div>
+                        <button onclick="scrollToSection('contact')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg smooth-transition hover:shadow-lg">
+                            Buyurtma Berish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 smooth-transition hover:border-pink-500 card-hover fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">UI/UX Dizayn</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Foydalanuvchi tajribasini yaxshilaydigan chiroyli va funksional dizaynlar yaratish.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Web Design
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Mobile App Design
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Prototyping
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Brand Identity
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold gradient-text mb-2">$300+</div>
+                        <div class="text-gray-400 text-sm mb-6">Dizayndan boshlab</div>
+                        <button onclick="scrollToSection('contact')" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-3 rounded-lg smooth-transition hover:shadow-lg">
+                            Buyurtma Berish
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-12 md:py-20 px-4 md:px-6 bg-gray-950 mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Mening</span> <span class="gradient-text">Blog</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-400 text-lg">Texnologiya va dasturlash haqida maqolalar</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-blue-500 card-hover fade-in">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-code text-6xl text-white"></i>
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            TUTORIAL
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            <span>15 Dekabr, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>5 daqiqa o'qish</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3 hover:text-blue-400 smooth-transition cursor-pointer">
+                            React.js da Custom Hooks Yaratish
+                        </h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            React.js da custom hooks yaratish va ulardan qanday foydalanish haqida batafsil qo'llanma...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-xs">React</span>
+                                <span class="bg-purple-600/20 text-purple-400 px-2 py-1 rounded text-xs">JavaScript</span>
+                            </div>
+                            <button class="text-blue-400 hover:text-blue-300 smooth-transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-green-500 card-hover fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative h-48 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center">
+                        <i class="fab fa-linux text-6xl text-white"></i>
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            GUIDE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            <span>12 Dekabr, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>8 daqiqa o'qish</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3 hover:text-green-400 smooth-transition cursor-pointer">
+                            Kali Linux da Penetration Testing
+                        </h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Kali Linux yordamida xavfsizlik testlari o'tkazish va zaifliklarni aniqlash usullari...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-2">
+                                <span class="bg-green-600/20 text-green-400 px-2 py-1 rounded text-xs">Linux</span>
+                                <span class="bg-red-600/20 text-red-400 px-2 py-1 rounded text-xs">Security</span>
+                            </div>
+                            <button class="text-green-400 hover:text-green-300 smooth-transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-purple-500 card-hover fade-in" style="animation-delay: 0.4s;">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-palette text-6xl text-white"></i>
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            DESIGN
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            <span>10 Dekabr, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>6 daqiqa o'qish</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3 hover:text-purple-400 smooth-transition cursor-pointer">
+                            UI/UX Dizaynda Rang Nazariyasi
+                        </h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Zamonaviy web dizaynda ranglardan to'g'ri foydalanish va foydalanuvchi tajribasini yaxshilash...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-2">
+                                <span class="bg-purple-600/20 text-purple-400 px-2 py-1 rounded text-xs">UI/UX</span>
+                                <span class="bg-pink-600/20 text-pink-400 px-2 py-1 rounded text-xs">Design</span>
+                            </div>
+                            <button class="text-purple-400 hover:text-purple-300 smooth-transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-12 fade-in">
+                <button onclick="openBlogModal()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl smooth-transition hover:shadow-lg hover:shadow-blue-500/25 text-lg font-medium">
+                    <i class="fas fa-plus mr-3"></i> Yangi Maqola Yozish
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section id="posts" class="py-12 md:py-20 px-4 md:px-6 bg-gray-950 mobile-fix" style="animation-play-state: running;">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Mening</span> <span class="gradient-text">Postlarim</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-400 text-lg">Videolar, rasmlar va ishlarim</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Video Post -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-blue-500 card-hover fade-in">
+                    <div class="relative h-48 bg-gradient-to-br from-red-600 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-play text-6xl text-white"></i>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            VIDEO
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">React Tutorial</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            React.js asoslari va zamonaviy web dasturlash texnikalari haqida batafsil video dars
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">2 kun oldin</span>
+                            <div class="flex space-x-4">
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-eye mr-2"></i> 1.2K
+                                </span>
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-heart mr-2"></i> 89
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Post -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-blue-500 card-hover fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative h-48 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-image text-6xl text-white"></i>
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            RASM
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">UI Design Showcase</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Yangi loyiham uchun yaratgan UI/UX dizayn namunalari va konseptlari
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">5 kun oldin</span>
+                            <div class="flex space-x-4">
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-eye mr-2"></i> 856
+                                </span>
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-heart mr-2"></i> 124
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Post -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 smooth-transition hover:border-blue-500 card-hover fade-in" style="animation-delay: 0.4s;">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-code text-6xl text-white"></i>
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            KOD
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Python Script</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Kali Linux uchun yaratgan avtomatlashtirish skripti va ishlatish yo'riqnomasi
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">1 hafta oldin</span>
+                            <div class="flex space-x-4">
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-eye mr-2"></i> 2.1K
+                                </span>
+                                <span class="text-gray-400 text-sm flex items-center">
+                                    <i class="fas fa-heart mr-2"></i> 156
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Button -->
+            <div class="text-center mt-12 fade-in">
+                <button onclick="openUploadModal()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl smooth-transition hover:shadow-lg hover:shadow-blue-500/25 text-lg font-medium">
+                    <i class="fas fa-plus mr-3"></i> Yangi Post Qo'shish
+                </button>
+            </div>
+        
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 md:py-20 px-4 md:px-6 bg-gray-950 mobile-fix" style="animation-play-state: running;">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Mening</span> <span class="gradient-text">Loyihalarim</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card smooth-transition card-hover fade-in">
+                    <div class="relative h-64 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center overflow-hidden">
+                        <!-- Video placeholder -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-play text-6xl text-white mb-4"></i>
+                                <p class="text-white text-sm">Loyiha videosi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Zamonaviy e-commerce platformasi - React va Node.js bilan yaratilgan. 
+                            To'liq funksional onlayn do'kon tizimi va admin paneli.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Stripe</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </button>
+                            <button class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card smooth-transition card-hover fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative h-64 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center overflow-hidden">
+                        <!-- Video placeholder -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-play text-6xl text-white mb-4"></i>
+                                <p class="text-white text-sm">Loyiha videosi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Security Dashboard</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Kali Linux uchun xavfsizlik monitoring dashboardi. Real-time trafik 
+                            tahlili, zaiflik skaneri, log monitoring va avtomatik xabar berish 
+                            tizimi bilan jihozlangan.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Flask</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Linux</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Docker</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </button>
+                            <button class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card smooth-transition card-hover fade-in" style="animation-delay: 0.4s;">
+                    <div class="relative h-64 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center overflow-hidden">
+                        <!-- Video placeholder -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-play text-6xl text-white mb-4"></i>
+                                <p class="text-white text-sm">Loyiha videosi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Design System</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            UI/UX dizayn tizimi - Framer va Figma bilan yaratilgan. Komponentlar 
+                            kutubxonasi, dizayn tokenlari va to'liq brand identity tizimi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Framer</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Figma</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Storybook</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </button>
+                            <button class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card smooth-transition card-hover fade-in" style="animation-delay: 0.6s;">
+                    <div class="relative h-64 bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center overflow-hidden">
+                        <!-- Video placeholder -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-play text-6xl text-white mb-4"></i>
+                                <p class="text-white text-sm">Loyiha videosi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Mobile App</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            React Native bilan yaratilgan cross-platform mobil ilova. 
+                            Real-time chat, push notifications va offline rejim bilan.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Redux</span>
+                            <span class="tech-tag px-3 py-1 rounded-full text-sm">Socket.io</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </button>
+                            <button class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-4 py-2 rounded-lg smooth-transition flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add Project Button -->
+            <div class="text-center mt-12 fade-in">
+                <button onclick="openProjectModal()" class="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-xl smooth-transition hover:shadow-lg hover:shadow-green-500/25 text-lg font-medium">
+                    <i class="fas fa-plus mr-3"></i> Yangi Loyiha Qo'shish
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-950" style="animation-play-state: running;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Men Bilan</span> <span class="gradient-text">Bog'laning</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-400 text-lg">Loyihangizni muhokama qilish uchun bog'laning</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <div class="space-y-6 fade-in">
+                    <h3 class="text-xl lg:text-2xl font-semibold text-white">Bog'lanish Ma'lumotlari</h3>
+                    <div class="space-y-4">
+                        <a href="mailto:kamolovotabekovich@gmail.com" class="contact-card p-4 lg:p-6 smooth-transition flex items-center space-x-3 lg:space-x-4 hover:scale-105">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-sm lg:text-lg"></i>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="font-semibold text-white text-base lg:text-lg">Email</div>
+                                <div class="text-gray-400 text-sm lg:text-base truncate">kamolovotabekovich@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="tel:+998971860884" class="contact-card p-4 lg:p-6 smooth-transition flex items-center space-x-3 lg:space-x-4 hover:scale-105">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white text-sm lg:text-lg"></i>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="font-semibold text-white text-base lg:text-lg">Telefon</div>
+                                <div class="text-gray-400 text-sm lg:text-base">+998 97 186 08 84</div>
+                            </div>
+                        </a>
+                        <a href="https://t.me/KAMOLOV_OTABEKOVICH" target="_blank" class="contact-card p-4 lg:p-6 smooth-transition flex items-center space-x-3 lg:space-x-4 hover:scale-105">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-telegram text-white text-sm lg:text-lg"></i>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="font-semibold text-white text-base lg:text-lg">Telegram</div>
+                                <div class="text-gray-400 text-sm lg:text-base">@KAMOLOV_OTABEKOVICH</div>
+                            </div>
+                        </a>
+                        <div class="contact-card p-4 lg:p-6 smooth-transition flex items-center space-x-3 lg:space-x-4">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-sm lg:text-lg"></i>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="font-semibold text-white text-base lg:text-lg">Manzil</div>
+                                <div class="text-gray-400 text-sm lg:text-base">Toshkent, O'zbekiston</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in" style="animation-delay: 0.3s;">
+                    <form class="space-y-4 lg:space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Ism</label>
+                            <input type="text" required="" class="w-full px-3 py-2 lg:px-4 lg:py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white smooth-transition text-sm lg:text-base" placeholder="Ismingiz">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" required="" class="w-full px-3 py-2 lg:px-4 lg:py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white smooth-transition text-sm lg:text-base" placeholder="sizning@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Xabar</label>
+                            <textarea rows="3" required="" class="w-full px-3 py-2 lg:px-4 lg:py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white smooth-transition text-sm lg:text-base resize-none" placeholder="Sizning xabaringiz..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2.5 lg:py-3 rounded-lg smooth-transition hover:shadow-lg hover:shadow-blue-500/25 text-base lg:text-lg font-medium">
+                            Xabar Yuborish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold mono mb-6 md:mb-0">
+                    <span class="text-white">dev</span><span class="gradient-text">Portfolio</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://youtube.com/@kamolov_otabekovich" target="_blank" class="text-gray-400 hover:text-red-400 smooth-transition" title="YouTube">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/KAMOLOV_OTABEKOVICH" target="_blank" class="text-gray-400 hover:text-blue-400 smooth-transition" title="Telegram">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/kamolov_otabekovich" target="_blank" class="text-gray-400 hover:text-pink-400 smooth-transition" title="Instagram">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="tel:+998971860884" class="text-gray-400 hover:text-green-400 smooth-transition" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/kamolov_otabekovich" target="_blank" class="text-gray-400 hover:text-white smooth-transition" title="GitHub">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:kamolovotabekovich@gmail.com" class="text-gray-400 hover:text-white smooth-transition" title="Email">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">© 2025 Kamolov Og'abek. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bcd268c5ecc3d1',t:'MTc1NDYzMzEyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body>
+</html>

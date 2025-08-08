@@ -1,0 +1,200 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        body {
+            background: #0f0f0f;
+            color: #e5e5e5;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .skill-bar {
+            height: 6px;
+            background: #1f1f1f;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 3px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #667eea;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .project-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .project-card:hover {
+            border-color: #667eea;
+        }
+        
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .contact-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+        }
+        
+        .contact-card:hover {
+            border-color: #667eea;
+            background: #1f1f1f;
+        }
+        
+        /* Mobile Responsive Fixes */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .hero-section {
+                padding-top: 6rem;
+            }
+            
+            .mobile-fix {
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            
+            .grid {
+                gap: 1.5rem;
+            }
+            
+            .text-5xl, .text-6xl {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .text-4xl {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+            
+            .social-icons {
+                transform: scale(0.8);
+            }
+            
+            .project-card, .contact-card {
+                margin: 0 0.5rem;
+            }
+            
+            .fade-in {
+                animation-duration: 0.6s;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .text-5xl, .text-6xl {
+                font-size: 2rem;
+                line-height: 1.1;
+            }
+            
+            .text-4xl {
+                font-size: 1.75rem;
+            }
+            
+            .text-2xl {
+                font-size: 1.5rem;
+            }
+            
+            .p-8 {
+                padding: 1.5rem;
+            }
+            
+            .p-6 {
+                padding: 1rem;
+            }
+            
+            .space-x-6 > * + * {
+                margin-left: 1rem;
+            }
+            
+            .gap-8 {
+                gap: 1rem;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem;
+            }
+        }
+        
